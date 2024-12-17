@@ -2,7 +2,7 @@ from brew_interpreter import BrewInterpreter
 from commands import process_command
 
 def main():
-    print("Welcome to the Brew Interpreter! (1.1-28-sapling)")
+    print("Welcome to the Brew Interpreter! (1.1)")
     print("Type 'exit' to quit.")
     print("Available commands:")
     print("  setbrew <tea/coffee/latte/mocha/fruit_tea> <name> - Create a new brew")
