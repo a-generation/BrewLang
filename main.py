@@ -1,7 +1,8 @@
 from brew_interpreter import BrewInterpreter
+from commands import process_command
 
 def main():
-    print("Welcome to the Advanced Brew Interpreter!")
+    print("Welcome to the Brew Interpreter! (1.1-28-sapling)")
     print("Type 'exit' to quit.")
     print("Available commands:")
     print("  setbrew <tea/coffee/latte/mocha/fruit_tea> <name> - Create a new brew")
@@ -15,7 +16,7 @@ def main():
     print("  suggest                                             - Get suggestions to improve the brew")
     print("  inspect                                             - Inspect the current brew")
     print("  serve                                               - Serve the selected brew print")
-    print("  seasonal_bonus                                      - Apply seasonal bonus to the selected brew")
+    print("  seasonal_bonus <season>                             - Apply seasonal bonus to the selected brew based on season")
     print("  weather_bonus <condition>                           - Apply weather bonus based on condition")
     print("  taste_review                                        - Get expert review of the selected brew")
     print("  recipe                                              - Get recipe for the selected brew")
@@ -26,7 +27,7 @@ def main():
 
     while True:
         command = input("> ")
-        if interpreter.process_command(command) == "exit":
+        if process_command(command, interpreter) == "exit":
             break
 
 
